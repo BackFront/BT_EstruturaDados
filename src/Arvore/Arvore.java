@@ -1,10 +1,7 @@
 package Arvore;
 
 /**
- * Esta classe é uma implementação 
- * de árvore binária cujos nós 
- * recebem números inteiros.
- * @author Yoshiriro
+ * @author Douglas Alves
  */
 public class Arvore {
 	
@@ -23,9 +20,16 @@ public class Arvore {
 		else {
 			raiz.inserirNo(conteudo);
 		}
+	}	
+	
+	public No getRaiz() {
+		return raiz;
 	}
 
-	
+	public void setRaiz(No raiz) {
+		this.raiz = raiz;
+	}
+
 	public boolean existeNo(Integer conteudo) {
 		// invocar apenas o método de busca na raiz
 		// portanto, é preciso criar um método
