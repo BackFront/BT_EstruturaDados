@@ -1,18 +1,29 @@
 package fibonacci;
 
+import java.util.Scanner;
+
 public class Fibonacci {
+	public static void main(String[] args) {
 
-	public Fibonacci(int maximo) {
-		int numero = 0;
-		int proximo_numero = 1;
-		int auxiliar;
+		int n;
+		System.out.println("Digite um número: ");
 
-		while (numero <= maximo) {
-			System.out.println(numero + ", ");
-			auxiliar = proximo_numero;
-			proximo_numero = proximo_numero + numero;
-			numero = auxiliar;
+		@SuppressWarnings("resource")
+		Scanner f = new Scanner(System.in);
+		n = f.nextInt();
+
+		for (int i = 0; Fibo(i) < n; i++) {
+
+			System.out.println(Fibo(i));
 		}
+
 	}
 
+	public static int Fibo(int n) {
+		if (n < 2) {
+			return n;
+		} else {
+			return Fibo(n - 1) + Fibo(n - 2);
+		}
+	}
 }
